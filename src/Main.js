@@ -1,20 +1,26 @@
 import React from "react";
 import HornedBeasts from "./HornedBeasts";
+import data from "./data.json";
 
 class Main extends React.Component {
-  render(){
-    return(
+
+  render() {
+
+    let beastsArr = [];
+
+    data.forEach((beasts, idx) => {
+      beastsArr.push(
+        <HornedBeasts key={idx} title={beasts.title} image_url={beasts.image_url} description={beasts.description} horns={beasts.horns} />
+      )
+    })
+    return (
       <>
-      <HornedBeasts 
-      title='manatee'
-      img='test' 
-      description='rotund mythical sea creature'/>
-      <HornedBeasts title='unicorn' 
-      img='test'
-      description='cross between rhino and horse'/>
+        <h2>Main</h2>
+        {beastsArr}
       </>
     )
   }
+
 }
 
 export default Main;
