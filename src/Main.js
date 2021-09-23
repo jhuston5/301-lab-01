@@ -15,7 +15,7 @@ class Main extends React.Component {
     })
     return (
       <>
-        <h2>Main</h2>
+        {/* <h2>Main</h2> */}
         {beastsArr}
       </>
     )
