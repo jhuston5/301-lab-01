@@ -1,22 +1,25 @@
 import React from "react";
-import HornedBeasts from "./HornedBeasts";
-import data from "./data.json";
+import HornedBeasts from "./HornedBeasts.js";
+import CardGroup from 'react-bootstrap/CardGroup'
 
 class Main extends React.Component {
 
   render() {
-
-    let beastsArr = [];
-
-    data.forEach((beasts, idx) => {
-      beastsArr.push(
-        <HornedBeasts key={idx} title={beasts.title} image_url={beasts.image_url} description={beasts.description} horns={beasts.horns} />
-      )
+    let beastsArr = this.props.data.map((beasts, idx) => {
+      return <HornedBeasts 
+      key={idx} 
+      title={beasts.title} 
+      image_url={beasts.image_url}
+      description={beasts.description}
+      horns={beasts.horns}
+      toggleModal={this.props.toggleModal} />
     })
     return (
       <>
-        {/* <h2>Main</h2> */}
-        {beastsArr}
+        <CardGroup>
+          {beastsArr}
+        </CardGroup>
+        
       </>
     )
   }
