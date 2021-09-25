@@ -1,23 +1,22 @@
-# Lab 2
+# Lab 3
 
 ## Horned Beasts
 
 ### Joshua Huston
 
-React application that takes beast data and displays in a card, with functionality to click on your favorite and display the number of clicks.
+React application that takes beast data and displays in a card, with functionality to click on your favorite and display the number of clicks. Added a Modal feature when clicking on an image.
 
 ### Links and Resources: React, [React Bootstrap](https://react-bootstrap.github.io/)
 
-Number and name of feature: vote feature
+Number and name of feature: modal feature
 
-Estimate of time needed to complete: 45 minutes
+Estimate of time needed to complete: 2 hours
 
-Start time: 9:47PM
-
-Finish time: 10:59PM
-
-Actual time needed to complete: 72 minutes
+Actual time needed to complete: 3 hours
 
 ### Reflections and Comments
 
-I love React and Bootstrap. To me this is much more intuitive than CSS or DOM manipulation. It's much more simple to bring in what was high level functionality using vanilla JS and CSS.
+This was a very tough lab for me.
+I need to be able to keep things clear in my state and props across multiple components. The modal was extremely tricky.
+
+I spent about 3 hours on this project.
