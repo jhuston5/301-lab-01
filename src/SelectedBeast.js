@@ -1,25 +1,25 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal'
-import Button from 'react-bootstrap/Button'
 import './App.css';
 
 class SelectedBeast extends React.Component {
 
   
   render() {
+    console.log('Selected beast props:', this.props)
     return(
+
     <div>
-       <Modal show={this.props.showModal} >
-        <Modal.Header >
-          <Modal.Title>Selected Beast</Modal.Title>
+       <Modal show={this.props.showModal} onHide={this.props.handleClose} >
+        <Modal.Header closeButton>
+          <Modal.Title>{this.props.selectedBeast.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={this.props.image} alt={this.props.title}></img></Modal.Body>
-          <p>{this.props.description}</p>
+          <img src={this.props.selectedBeast.image_url} style={{width:'20rem'}} alt={this.props.title}></img>
+          <p>{this.props.selectedBeast.description}</p>
+          </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.props.showModal}>
-            Close
-          </Button>
+         
         </Modal.Footer>
       </Modal>
       </div>
